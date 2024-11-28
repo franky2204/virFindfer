@@ -7,3 +7,7 @@ read2:
 fasta_file:
   class: File
   path: /home/franky/Desktop/work/git/virFindfer/test.fa
+threads: 12
+database:
+  class: Directory
+  path: /home/franky/Downloads/genomad_db

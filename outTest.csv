@@ -1,0 +1,10 @@
+Header,Length,phage_score,chromosome_score,plasmid_score,Possible_source
+"Caudo-circular",31801,0.649265594111554,0.0415849812021357,0.30914942383291,phage
+"Caudo-linear",13842,0.90010202233286,0.0290335068756407,0.0708644785620295,phage
+"Caudo-provirus  NC_014002.1||s:1410405||e:1825129||index:272||accession:GCF_000025865.1  Methanohalophilus mahii DSM 5219, complete genome",213842,0.069358721035239,0.763225896172835,0.167415386287446,chromosome
+"NCLDV-linear",1181549,0.703766999291179,0.213912776492871,0.0823202216911635,phage
+"ssDNA-linear  NC_001718.1||s:2||e:4763||index:858||accession:GCF_000839485.1  Porcine parvovirus, complete genome",4761,0.754224203296931,0.121160572895307,0.124615219546646,phage
+"RNA-linear  NC_003375.1||s:2420||e:7962||index:881||accession:GCF_000848665.1  Garlic virus A, complete genome",5542,0.421996463735486,0.113719294698003,0.464284205342062,plasmid
+"lavidaviridae-linear  NC_021333.1||s:6760||e:15358||index:41||accession:GCF_000909155.1  Phaeocystis globosa virus virophage, complete genome",8598,0.488355083184399,0.143941159794901,0.367703758757262,phage
+"nonviral-linear  NC_014002.1||s:1410405||e:1825129||index:272||accession:GCF_000025865.1  Methanohalophilus mahii DSM 5219, complete genome",200000,0.0112831577067053,0.815486999884248,0.173229841264983,chromosome
+"Caudo-1hallmarkgene  NC_001416.1||s:5132||e:5737  Enterobacteria phage lambda, capsid component",606,0.996736109256744,2.25020885409322e-05,0.00324141350574791,phage
