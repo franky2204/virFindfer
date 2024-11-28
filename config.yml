@@ -1,0 +1,9 @@
+read1:
+  class: File
+  path: /media/franky/Seagate_Basic/Università/virfinder/input/HV04_R1.fq.gz
+read2:
+  class: File 
+  path: /media/franky/Seagate_Basic/Università/virfinder/input/HV04_R2.fq.gz
+fasta_file:
+  class: File
+  path: /home/franky/Desktop/work/git/virFindfer/test.fa

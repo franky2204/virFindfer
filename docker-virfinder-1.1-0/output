@@ -1,0 +1,10 @@
+name	length	score	pvalue
+Caudo-circular	31801	0.921385828566545	0.0109143827310211
+Caudo-linear	13842	0.78356163148204	0.0310453553237934
+Caudo-provirus  NC_014002.1||s:1410405||e:1825129||index:272||accession:GCF_000025865.1  Methanohalophilus mahii DSM 5219, complete genome	213842	0.0810350465267105	0.372786805723987
+NCLDV-linear	1181549	0.221448009491896	0.205918020858598
+ssDNA-linear  NC_001718.1||s:2||e:4763||index:858||accession:GCF_000839485.1  Porcine parvovirus, complete genome	4761	0.854543771089392	0.0207373271889401
+RNA-linear  NC_003375.1||s:2420||e:7962||index:881||accession:GCF_000848665.1  Garlic virus A, complete genome	5542	0.553262279169384	0.0762794081979141
+lavidaviridae-linear  NC_021333.1||s:6760||e:15358||index:41||accession:GCF_000909155.1  Phaeocystis globosa virus virophage, complete genome	8598	0.810614723905546	0.0268008731506185
+nonviral-linear  NC_014002.1||s:1410405||e:1825129||index:272||accession:GCF_000025865.1  Methanohalophilus mahii DSM 5219, complete genome	2e+05	0.0636859197850632	0.408925539655591
+Caudo-1hallmarkgene  NC_001416.1||s:5132||e:5737  Enterobacteria phage lambda, capsid component	606	0.56291232971663	0.155650446871897
