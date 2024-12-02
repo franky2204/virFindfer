@@ -5,25 +5,25 @@ baseCommand: ["awk"]
 
 requirements:
   - class: DockerRequirement
-    dockerPull: "debian:stable-slim"  # Immagine Docker leggera con awk
+    dockerPull: "debian:stable-slim" 
+  - class: InlineJavascriptRequirement  
 
 inputs:
   read1:
     type: File
     inputBinding:
-      position: 2  # Il file di input è il secondo argomento
+      position: 2  
 
 outputs:
   updated_fasta:
     type: File
     outputBinding:
-      glob: $(inputs.read1.nameroot + "_noDup.fasta")  # Nome file basato su read1.nameroot
-
+      glob: $(inputs.read1.nameroot + ".fasta")
 arguments:
   - valueFrom: |
       '/^>/{if($0 ~ / 1:/) print $1"_1"; else if($0 ~ / 2:/) print $1"_2"; else print $0} !/^>/'
-    position: 1  # Lo script awk è il primo argomento
+    position: 1  
   - valueFrom: ">"
-    position: 3  # Reindirizzamento dell'output
+    position: 3 
   - valueFrom: $(inputs.read1.nameroot + ".fasta")
-    position: 4  # Nome file di output basato su read1.nameroot
+    position: 4 
