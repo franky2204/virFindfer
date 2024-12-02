@@ -5,7 +5,7 @@ inputs:
     fasta_file: File
 outputs:
   output_file:
-    type: Directory
+    type: File
     outputSource:  create_fasta2/updated_fasta
   
 
