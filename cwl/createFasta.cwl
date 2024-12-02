@@ -6,7 +6,7 @@ requirements:
     dockerPull: "staphb/seqtk"
   - class: InlineJavascriptRequirement
 
-baseCommand: ["bash", "-c"]  # Use bash to handle piping correctly
+baseCommand: ["bash", "-c"]  
 
 inputs:
   read1:
