@@ -19,10 +19,15 @@ steps:
       read1: read1
       read2: read2
     out: [fasta_file]
+  create_fasta2:
+    run: cwl/createFasta2.cwl
+    in:
+      read1: create_fasta/fasta_file
+    out: [updated_fasta]
   run_genomad:
     run: cwl/genomad.cwl
     in:
-        input_fasta: create_fasta/fasta_file
+        input_fasta: create_fasta2/updated_fasta
         database: database
         threads: threads
     out: [output_file]

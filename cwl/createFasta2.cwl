@@ -1,35 +1,29 @@
 cwlVersion: v1.2
 class: CommandLineTool
 
+baseCommand: ["awk"]
+
 requirements:
   - class: DockerRequirement
-    dockerPull: "staphb/seqtk"
-  - class: InlineJavascriptRequirement
-
-baseCommand: ["bash", "-c"]
+    dockerPull: "debian:stable-slim"  # Immagine Docker leggera con awk
 
 inputs:
   read1:
     type: File
     inputBinding:
-      position: 1
-  read2:
-    type: File
-    inputBinding:
-      position: 2
+      position: 2  # Il file di input è il secondo argomento
 
 outputs:
-  fasta_file:
+  updated_fasta:
     type: File
     outputBinding:
-      glob: "*.fasta"
+      glob: $(inputs.read1.nameroot + "_noDup.fasta")  # Nome file basato su read1.nameroot
 
 arguments:
   - valueFrom: |
-      seqtk mergepe $(inputs.read1.path) $(inputs.read2.path) | \
-      seqtk seq -A - > temp.fasta && \
-      awk '/^>/{if($0 ~ / 1:/) print $1"_1"; else if($0 ~ / 2:/) print $1"_2"; else print $0} !/^>/' temp.fasta > $(inputs.read1.nameroot).fasta
-    shellQuote: false
-
-stdout: merged.log
-
+      '/^>/{if($0 ~ / 1:/) print $1"_1"; else if($0 ~ / 2:/) print $1"_2"; else print $0} !/^>/'
+    position: 1  # Lo script awk è il primo argomento
+  - valueFrom: ">"
+    position: 3  # Reindirizzamento dell'output
+  - valueFrom: $(inputs.read1.nameroot + ".fasta")
+    position: 4  # Nome file di output basato su read1.nameroot
