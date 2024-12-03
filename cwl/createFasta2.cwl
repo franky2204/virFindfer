@@ -23,7 +23,6 @@ outputs:
 arguments:
   - valueFrom: '/^>/{if($0 ~ / 1:/) print $1"_1"; else if($0 ~ / 2:/) print $1"_2"; else print $0} !/^>/' 
     position: 1  
-  - valueFrom: ">"
-    position: 3 
-  - valueFrom: "$(inputs.read1.nameroot).fasta"
-    position: 4  
+
+stdout: "$(inputs.read1.nameroot).fasta"  
+stderr: "$(inputs.read1.nameroot).fasta"  

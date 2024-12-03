@@ -6,7 +6,7 @@ read2:
   path: /media/franky/Seagate_Basic/Università/virfinder/input/HV04_R2.fq.gz
 fasta_file:
   class: File
-  path: /home/franky/Desktop/work/git/virFindfer/test.fa
+  path: /home/franky/Downloads/HV04_short.fasta
 threads: 12
 database:
   class: Directory
