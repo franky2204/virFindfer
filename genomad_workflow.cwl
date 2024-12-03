@@ -2,9 +2,8 @@ cwlVersion: v1.2
 class: Workflow
 
 inputs:
-  #read1: File
-  #read2: File
-  fasta_file: File  
+  read1: File
+  read2: File 
   database: Directory
   threads: int?
 outputs:
@@ -14,16 +13,16 @@ outputs:
   
 
 steps:
-  #create_fasta:
-  #  run: cwl/createFasta.cwl
-  #  in:
-  #    read1: read1
-  #    read2: read2
-  #  out: [fasta_file]
+  create_fasta:
+    run: cwl/createFasta.cwl
+    in:
+      read1: read1
+      read2: read2
+    out: [fasta_file]
   create_fasta2:
     run: cwl/createFasta2.cwl
     in:
-      read1: fasta_file
+      read1: create_fasta/fasta_file
     out: [updated_fasta]
   run_genomad:
     run: cwl/genomad.cwl
