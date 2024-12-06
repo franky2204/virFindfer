@@ -4,9 +4,8 @@ class: CommandLineTool
 requirements:
   - class: DockerRequirement
     dockerPull: "staphb/seqtk"
-  - class: InlineJavascriptRequirement
 
-baseCommand: ["bash", "-c", "seqtk seq"]
+baseCommand: ["seqtk", "seq"]
 
 inputs:
   read1:
@@ -14,18 +13,16 @@ inputs:
     inputBinding:
       position: 1
       prefix: "-a"
+  output_filename:
+    type: string
+    default: "$(inputs.read1.nameroot).fasta"
 
 outputs:
   fasta_file:
     type: File
     outputBinding:
-      glob: "*.fasta"  # Corrected output file pattern
+      glob: "*.fasta" 
 
 arguments:
-  - valueFrom: "$(inputs.read1.path).fasta"
-    shellQuote: false
-    position: 2
-
-
-stdout: merged.log  # Log standard output to merged.log
-stderr: merged.log  # Log errors to the same log file
+  - valueFrom: "> $(inputs.output_filename)"
+    shellQuote: true
