@@ -19,10 +19,10 @@ outputs:
   fasta_file:
     type: File
     outputBinding:
-      glob: "$(inputs.read1.nameroot).fasta"  # Corrected output file pattern
+      glob: "*.fasta"  # Corrected output file pattern
 
 arguments:
-  - valueFrom: "$(inputs.read1.path)"
+  - valueFrom: "$(inputs.read1.path).fasta"
     shellQuote: false
     position: 2
 
