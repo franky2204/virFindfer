@@ -27,5 +27,6 @@ outputs:
 arguments:
   - valueFrom: "seqtk mergepe $(inputs.read1.path) $(inputs.read2.path) | seqtk seq -A - > $(inputs.read1.nameroot).fasta"
     shellQuote: false
+    
 
 stdout: merged.log  # Redirect logs

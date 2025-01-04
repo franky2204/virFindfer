@@ -5,4 +5,4 @@ LABEL version="1.8.1"
 RUN micromamba install -y -n base -c conda-forge -c bioconda genomad==1.8.1 && \
     micromamba clean --all --yes
 WORKDIR /app
-ENTRYPOINT ["bash"]
+ENTRYPOINT ["/usr/local/bin/_entrypoint.sh", "genomad"]
