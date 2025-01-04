@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -13,3 +13,4 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip install pyrodigal-gv
 
+CMD ["/bin/bash"]
